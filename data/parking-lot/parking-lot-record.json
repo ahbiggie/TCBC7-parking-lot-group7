@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "lotId": "PL-001",
+    "plateNumber": "GRP-7-PRO-001",
+    "ownerName": "Uchenna Opara",
+    "vehicleType": "Car",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 2,
+    "lotId": "PL-002",
+    "plateNumber": "GRP-7-PRO-002",
+    "ownerName": "Rufai Abdulrahamon Oluwadamilare",
+    "vehicleType": "Bus",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 3,
+    "lotId": "PL-003",
+    "plateNumber": "GRP-7-PRO-003",
+    "ownerName": "Sanmi Livingstone",
+    "vehicleType": "Suv",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 4,
+    "lotId": "PL-004",
+    "plateNumber": "GRP-7-PRO-004",
+    "ownerName": "Seth Asamaige",
+    "vehicleType": "Sienna",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 5,
+    "lotId": "PL-005",
+    "plateNumber": "GRP-7-PRO-005",
+    "ownerName": "Shaibu Yusuf Lawal",
+    "vehicleType": "Pickup",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 6,
+    "lotId": "PL-006",
+    "plateNumber": "GRP-7-PRO-006",
+    "ownerName": "Simon Ebelethe",
+    "vehicleType": "Jeep",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 7,
+    "lotId": "PL-007",
+    "plateNumber": "GRP-7-PRO-007",
+    "ownerName": "Triumph Oroboghene Smart",
+    "vehicleType": "Van",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 8,
+    "lotId": "PL-008",
+    "plateNumber": "GRP-7-PRO-008",
+    "ownerName": "Uduak Umanah",
+    "vehicleType": "Minivan",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 9,
+    "lotId": "PL-009",
+    "plateNumber": "GRP-7-PRO-009",
+    "ownerName": "Victor Olusegun",
+    "vehicleType": "Saloon",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  },
+  {
+    "id": 10,
+    "lotId": "PL-010",
+    "plateNumber": "GRP-7-PRO-010",
+    "ownerName": "Yusuf Uduak Lawal",
+    "vehicleType": "Suv",
+    "status": "Parked",
+    "createdAt": "2026-07-02T10:30:00Z",
+    "updatedAt": "2026-07-02T10:30:00Z"
+  }
+]
