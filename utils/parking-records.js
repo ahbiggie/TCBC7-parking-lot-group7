@@ -12,7 +12,7 @@ export async function readData() {
         if (error.code === 'ENOENT') {
             //'ENOENT' means 'Error NO ENTry' or 'no such file or directory', which means the file does not exist
             return []; // File does not exist, return an empty array
-        }   throw error;
+        }   throw new Error;
     }
 }
 
