@@ -6,7 +6,7 @@ app.use(express.json());
 const PORT = 3000;
 
 const parkingLotRecords = JSON.parse(
-  fs.readFileSync("./data/parking-lot/parking-lot-record.json"),
+  fs.readFileSync("./data/records.json"),
 );
 
 app.get("/api/v1/parking-lot-records", (req, res) => {
