@@ -5,8 +5,16 @@ import fs from 'fs/promises';
 const filePath = './data/data.json';
 
 export async function readData() {
+    try {
     const data = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(data);
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            //'ENOENT' means 'Error NO ENTry' or 'no such file or directory', which means the file does not exist
+            // File does not exist, return an empty array
+            return [];
+        }   throw error;
+    }
 }
 
 export async function writeData(data) {
