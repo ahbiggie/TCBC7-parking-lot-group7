@@ -23,4 +23,19 @@ async function readRecords() {
     }
 }
 
-console.log(await readRecords());
+// console.log(await readRecords());
+
+// write records function
+async function writeRecords(data) {
+    try {
+        const writeRecord = JSON.stringify(data, null, "\t");
+
+        await fs.writeFile(recordsPath, writeRecord, "utf-8");
+
+        return true;
+    } catch (error) {
+        throw error;
+    }
+}
+
+export { readRecords, writeRecords };
