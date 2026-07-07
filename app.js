@@ -38,21 +38,19 @@ app.get("/api/v1/parking-lot-records/:id", (req, res) => {
 app.post("/api/v1/parking-lot-records", (req, res) => {
   const newId = parkingLotRecords[parkingLotRecords.length - 1].id + 1;
   const newParkingLotRecord = Object.assign({ id: newId }, req.body);
-  parkingLotRecords = JSON.stringify(
-    parkingLotRecords.push(newParkingLotRecord),
-  );
-  fs.writeFile(
-    "./data/parking-lot/parking-lot-record.json",
-    parkingLotRecords,
-    (err) => {
-      res.status(201).json({
-        status: "success",
-        data: {
-          parkingLotRecord: newParkingLotRecord,
-        },
-      });
-    },
-  );
+  (parkingLotRecords.push(newParkingLotRecord),
+    fs.writeFile(
+      "./data/parking-lot/parking-lot-record.json",
+      JSON.stringify(parkingLotRecords),
+      (err) => {
+        res.status(201).json({
+          status: "success",
+          data: {
+            parkingLotRecord: newParkingLotRecord,
+          },
+        });
+      },
+    ));
 });
 
 app.patch("/api/v1/parking-lot-records/:id", (req, res) => {
