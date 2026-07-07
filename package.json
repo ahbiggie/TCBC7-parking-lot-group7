@@ -4,6 +4,8 @@
   "description": "TechCrush Backend cohort 7, Collaborative Parking lot mini project.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ahbiggie/TCBC7-parking-lot-group7/issues"
   },
-  "homepage": "https://github.com/ahbiggie/TCBC7-parking-lot-group7#readme"
+  "homepage": "https://github.com/ahbiggie/TCBC7-parking-lot-group7#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
