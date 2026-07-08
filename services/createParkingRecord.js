@@ -1,17 +1,56 @@
-export async function doubleParking(records, licensePlate) {
-    // 1. Checking if the license plate is already parked
-    const isAlreadyParked = records.some((record) => {
-        return record.licensePlate === licensePlate && record.status === "parked";
-    });
+import { randomUUID } from "node:crypto";
+import { readRecords, writeRecords } from "../utils/recordsStorage.js";
+import { doubleParking, lotFull } from "./parkingChecks.js";
 
-    // 2. Returning true if the license plate is already parked
-    return isAlreadyParked;
-}
+export async function createParkingRecord(data) {
+    const records = await readRecords();
 
-export async function lotFull(records, lotNumber) {
-    const isLotOccupied = records.some((record) => {
-        return record.lotNumber === lotNumber && record.status === "parked";
-    });
+    const isDoubleParked = doubleParking(records, data.licensePlate);
 
-    return isLotOccupied;
+    if (isDoubleParked) {
+        return {
+            statusCode: 409,
+            message: "Vehicle is already parked."
+        };
+    }
+
+    const isLotFull = lotFull(records, data.lotNumber);
+
+    if (isLotFull) {
+        return {
+            statusCode: 409,
+            message: "Parking lot is already occupied."
+        };
+    }
+
+    const now = new Date().toISOString();
+
+    const newRecord = {
+        id: randomUUID(),
+        licensePlate: data.licensePlate,
+        vehicleType: data.vehicleType,
+        lotNumber: data.lotNumber,
+        expectedTimeOut: data.expectedTimeOut,
+        status: "parked",
+        createdAt: now,
+        updatedAt: now,
+        actualTimeOut: null
+    };
+
+    records.push(newRecord);
+
+    try {
+        await writeRecords(records);
+    } catch (error) {
+        return {
+            statusCode: 500,
+            message: error.message
+        };
+    }
+
+    return {
+        statusCode: 201,
+        message: "Parking record created successfully.",
+        record: newRecord
+    };
 }
