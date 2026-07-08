@@ -9,7 +9,7 @@ TechCrush Backend Cohort 7 — Collaborative Parking Lot Mini Project.
 - **Shaibu Yusuf Lawal** (Team Lead) - File Storage (Service logic) & Integration
 - **Rufai Abdulrahamon Oluwadamilare** - Routes (GET/POST)
 - **Sanmi Livingstone** - Validation (Business rules)
-- **Seth Asamaige** - README
+- **Seth Asamaige** - README & PR Review
 - **Simon Ebelethe** - File Storage (Service logic)
 - **Triumph Oroboghene Smart** - Validation (Field-level checks)
 - **Uchenna Opara** - Testing (Postman)
