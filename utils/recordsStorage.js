@@ -29,13 +29,22 @@ async function readRecords() {
 async function writeRecords(data) {
     try {
         const writeRecord = JSON.stringify(data, null, "\t");
+        // handle folder creation if folder does not exist.
+        await fs.mkdir(path.dirname(recordsPath), { recursive: true });
 
         await fs.writeFile(recordsPath, writeRecord, "utf-8");
 
         return true;
     } catch (error) {
-        // Throw any type of error, handled in the service folder
-        throw error;
+        console.error("Failed to write records:", error);
+
+        const writeError = new Error("Could not save records. Please try again.");
+
+        writeError.code = error.code;
+        // changing the original error to a new one without losing it.
+        writeError.cause = error;
+        // throw error, to be handled in the service folder
+        throw writeError;
     }
 }
 

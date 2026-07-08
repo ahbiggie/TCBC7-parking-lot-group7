@@ -1,25 +1,102 @@
-
 [
-    {
-        "id": "f9a2c3b",
-        "licensePlate": "LAG-123AA",
-        "vehicleType": "Ambulance",
-        "lotNumber": "A3",
-        "status": "parked",
-        "createdAt": "2026-07-01T18:30:00Z",
-        "updatedAt": "2026-07-01T18:30:00Z",
-        "expectedTimeOut": "2026-07-01T20:00:00Z",
-        "actualTimeOut": null
-    },
-    {
-        "id": "f9a2c3b",
-        "licensePlate": "LAG-123AA",
-        "vehicleType": "Ambulance",
-        "lotNumber": "A3",
-        "status": "parked",
-        "createdAt": "2026-07-01T18:30:00Z",
-        "updatedAt": "2026-07-01T18:30:00Z",
-        "expectedTimeOut": "2026-07-01T20:00:00Z",
-        "actualTimeOut": null
-    }
+  {
+    "lotId": "1",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "2",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "3",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "4",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "5",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "6",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "7",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "8",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "9",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  },
+  {
+    "lotId": "10",
+    "licensePlate": null,
+    "vehicleType": null,
+    "status": "available",
+    "createdAt": "2026-07-08T04:30:00.000Z",
+    "updatedAt": "2026-07-08T04:30:00.000Z",
+    "parkedAt": null,
+    "unparkedAt": null
+  }
 ]
