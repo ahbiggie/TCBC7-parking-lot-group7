@@ -83,4 +83,51 @@ router.put('/:lotId', async (req, res) => {
     }
 });
 
+// PUT endpoint to unpark a vehicle (release the slot)
+router.put('/:lotId/unpark', async (req, res) => {
+    try{
+        const { lotId } = req.params;
+
+        const parkingLots = await readData();
+
+        // Find the specific parking slot
+        const lot = parkingLots.find(item => item.lotId === lotId);
+
+        // If slot doesn't exist...
+        if (!lot) {
+            return res.status(404).json({
+                error: `Parking slot with ID ${lotId} does not exist.`
+            });
+        }
+
+        // If slot is already empty...
+        if (lot.status === 'available') {
+            return res.status(400).json({
+                error: `Cannot unpark. Parking slot ${lotId} is already empty.`
+            });
+        }
+
+        // Update parking slot details
+        lot.licensePlate = null;
+        lot.vehicleType = null;
+        lot.status = 'available';
+
+        const now = new Date().toISOString();
+        lot.updatedAt = now;
+        lot.unparkedAt = now;
+
+        await writeData(parkingLots);  // save updated data
+
+        return res.status(200).json({
+            message: "Vehicle unparked successfully.",
+            data: lot
+        });
+    } catch (error) {
+        console.error("Error handling PUT /:lotId/unpark: ", error);
+        return res.status(500).json({
+            error: "An unexpected internal server error occured."
+        });
+    }
+});
+
 export default router;
