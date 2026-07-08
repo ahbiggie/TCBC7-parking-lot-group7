@@ -1,1 +1,0 @@
-// here's the entry point of our Parking lot application
