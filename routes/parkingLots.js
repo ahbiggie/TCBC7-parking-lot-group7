@@ -85,7 +85,7 @@ router.put('/:lotId', async (req, res) => {
 
 // PUT endpoint to unpark a vehicle (release the slot)
 router.put('/:lotId/unpark', async (req, res) => {
-    try{
+    try {
         const { lotId } = req.params;
 
         const parkingLots = await readData();
