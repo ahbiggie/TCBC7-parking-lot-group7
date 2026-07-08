@@ -1,14 +1,17 @@
-import { readRecords } from "../utils/recordsStorage.js";
-
-export async function doubleParking(licensePlate) {
-    // 1. Reading from the ../data/recordsStorage.js file
-    const records = await readRecords();
-
-    // 2. Checking if the license plate is already parked
+export async function doubleParking(records, licensePlate) {
+    // 1. Checking if the license plate is already parked
     const isAlreadyParked = records.some((record) => {
         return record.licensePlate === licensePlate && record.status === "parked";
     });
 
-    // 3. Returning true if the license plate is already parked
+    // 2. Returning true if the license plate is already parked
     return isAlreadyParked;
+}
+
+export async function lotFull(records, lotNumber) {
+    const isLotOccupied = records.some((record) => {
+        return record.lotNumber === lotNumber && record.status === "parked";
+    });
+
+    return isLotOccupied;
 }
