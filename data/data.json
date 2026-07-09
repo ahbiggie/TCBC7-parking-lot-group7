@@ -1,1 +1,13 @@
-[]
+[
+	{
+		"id": "68f2591c-20da-46b9-b307-222cff7b8637",
+		"licensePlate": "LAG-123AA",
+		"vehicleType": "sedan",
+		"lotNumber": "A1",
+		"expectedTimeOut": "2026-07-08T20:00:00Z",
+		"status": "parked",
+		"createdAt": "2026-07-09T13:20:51.012Z",
+		"updatedAt": "2026-07-09T13:20:51.012Z",
+		"actualTimeOut": null
+	}
+]
